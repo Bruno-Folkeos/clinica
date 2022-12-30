@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #6c31b9, #622eac, #582b9f, #4e2892, #452585, #3a2378, #2f206c, #261d5f, #19194f, #0d1440, #070c30, #000021);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+input {
+  background: transparent;
+  border-bottom: 1px solid #7C7C8A !important;
+  border: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  color: white;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 700px;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  color: white;
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  flex: 0 0 auto;
+  display: flex;
+  padding-left: 12rem;
+  gap: 2rem;
+}
+
+form .header {
+  display: flex;
+  gap: 2rem;
+}
+
+form .links-forms {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+form .button {
+  background: #6D28D9;
+  padding: 10px 15px;
+  border-radius: 1.5rem;
+}
+
+form .link {
+  text-transform: uppercase;
+}
+
+form .link-title {
+  text-transform: capitalize;
+  font-size: 1.5rem;
+}
+
+form .midia-sociais {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+form img {
+  max-width: 50px;
+
+}
+
+.texto h1 {
+  color: #FFFF;
+}
+
+.texto {
+  width: 70%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8rem;
+  margin-top: -12rem;
+}
