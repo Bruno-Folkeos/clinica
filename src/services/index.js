@@ -1,25 +1,20 @@
 import axios from "axios";
 
+const CADASTRACLIENT = "/clientes/cadastrarCliente";
+
 const http = axios.create({
-    baseURL: 'https://1005-186-195-147-146.ngrok-free.app/'
-  })
+  baseURL: "https://ba7b-186-195-155-2.ngrok-free.app/",
+});
 //End Points
-const JSONRPC = 'jsonrpc'
 
+const registerUser = async (payload) => {
+  try {
+    await http.post(CADASTRACLIENT, { ...payload });
 
-const registerUser = async payload => {
-    try {
-       
-        await http.post(JSONRPC, {...payload})
+    return true;
+  } catch (error) {
+    alert(error.message);
+  }
+};
 
-        return true
-    } catch (error) {
-        alert(error.message)
-    }
-}
-
-export {
-    registerUser
-}
-
-
+export { registerUser };

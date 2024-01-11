@@ -4,17 +4,23 @@
 
     <label for="nome">Nome:</label>
     <input
-      v-model="this.payload.params.args[5][0].name"
+      v-model="this.payload.nome"
       type="text"
       id="nome"
       name="nome"
       required
     />
     <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" required />
+    <input
+      v-model="payload.email"
+      type="email"
+      id="email"
+      name="email"
+      required
+    />
     <label for="senha">Senha:</label>
     <input
-      v-model="this.payload.params.args[5][0].senha"
+      v-model="this.payload.senha"
       type="password"
       id="senha"
       name="senha"
@@ -22,10 +28,10 @@
     />
 
     <label for="genero">Gênero:</label>
-    <select id="genero" name="genero">
-      <option value="masculino">Masculino</option>
-      <option value="feminino">Feminino</option>
-      <option value="outro">Outros</option>
+    <select v-model="payload.genero" id="genero" name="genero">
+      <option value="m">Masculino</option>
+      <option value="f">Feminino</option>
+      <option value="o">Outros</option>
     </select>
 
     <button @click="adicionarUser()" type="button">Cadastrar</button>
@@ -43,29 +49,15 @@ export default {
   data() {
     return {
       payload: {
-        params: {
-          service: "object",
-          method: "execute_kw",
-          args: [
-            "teste_cadastros",
-            "2",
-            "admin",
-            "contatos",
-            "create",
-            [
-              {
-                name: "",
-                senha: "",
-              },
-            ],
-          ],
-        },
+        nome: "",
+        email: "",
+        senha: "",
+        genero: "",
       },
     };
   },
   methods: {
     async adicionarUser() {
-      console.log();
       const response = await registerUser(this.payload);
 
       if (response == true) {
